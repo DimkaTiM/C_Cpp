@@ -49,3 +49,11 @@ printf( "exited. i = %d\n", i );
 
 stop: printf( "Jumped to stop. i = %d\n", i );
 ```
+
+
+Замерять время алгоритма
+```C++
+start = std::chrono::system_clock::now(); // начальное время
+int result = fibonacci(10);
+end = std::chrono::system_clock::now(); // конечное время
+```
