@@ -30,3 +30,19 @@ int main()
     std::cout << stddev(4, 20, 25, 30, 35) << '\n'; // 110
 }
 ```
+
+"С++" реализация goto
+```C++
+ int i;
+    for ( i = 0; i < 10; i++ )
+    {
+        printf( "Hi i = %d\n", i );
+        if(i == 5){
+            goto stop;
+        }
+    }
+    /* This message does not print: */
+    printf( "exited. i = %d\n", i );
+
+    stop: printf( "Jumped to stop. i = %d\n", i );
+```
