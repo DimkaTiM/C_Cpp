@@ -33,16 +33,19 @@ int main()
 
 "С++" реализация goto
 ```C++
- int i;
-    for ( i = 0; i < 10; i++ )
-    {
-        printf( "Hi i = %d\n", i );
-        if(i == 5){
-            goto stop;
-        }
+int i;
+for ( i = 0; i < 10; i++ ) {
+    if(i > 10) {
+        stop: printf( "Jumped to stop. i = %d\n", i );
+        break;
     }
-    /* This message does not print: */
-    printf( "exited. i = %d\n", i );
+    printf( "Hi i = %d\n", i );
+    if(i == 5) {
+        goto stop;
+    }
+}
+/* This message does not print: */
+printf( "exited. i = %d\n", i );
 
-    stop: printf( "Jumped to stop. i = %d\n", i );
+stop: printf( "Jumped to stop. i = %d\n", i );
 ```
